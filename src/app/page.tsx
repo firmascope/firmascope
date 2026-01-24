@@ -69,7 +69,7 @@ export default function Home() {
           <h2>Erken erişim listesine katıl</h2>
           <p>Ürün hazır olduğunda ilk sen haberdar ol.</p>
         </div>
-        <form className="notify-form" onSubmit={(e) => e.preventDefault()}>
+        <form className="notify-form" action="#" method="post">
           <input type="email" placeholder="E-posta" required />
           <button type="submit">Bildirim Al</button>
         </form>
