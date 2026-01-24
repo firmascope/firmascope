@@ -10,8 +10,8 @@ function isAdmin(req: NextRequest) {
   const bearer = authHeader.toLowerCase().startsWith("bearer ")
     ? authHeader.slice(7).trim()
     : "";
-  const provided = headerKey || bearer;
-  const expected = process.env.ADMIN_API_KEY ?? "";
+  const provided = (headerKey || bearer).trim();
+  const expected = (process.env.ADMIN_API_KEY ?? "").trim();
   return Boolean(expected) && provided === expected;
 }
 
