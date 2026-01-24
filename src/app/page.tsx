@@ -1,4 +1,4 @@
-"use client";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,12 +12,12 @@ export default function Home() {
             güçlü bir veri platformu. Hazırlık aşamasındayız.
           </p>
           <div className="cta-row">
-            <a className="cta primary" href="#notify">
-              Erken Erişim
-            </a>
-            <a className="cta ghost" href="#roadmap">
-              Yol Haritası
-            </a>
+            <Link className="cta primary" href="/companies">
+              Şirketleri keşfet
+            </Link>
+            <Link className="cta ghost" href="/auth">
+              Hesabını oluştur
+            </Link>
           </div>
           <div className="stats">
             <div>
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid" id="roadmap">
+      <section className="grid">
         <article>
           <h2>Veri Katmanı</h2>
           <p>Supabase + RLS ile kullanıcı verisinin sızmasını engeller.</p>
@@ -71,10 +71,14 @@ export default function Home() {
           <h2>Erken erişim listesine katıl</h2>
           <p>Ürün hazır olduğunda ilk sen haberdar ol.</p>
         </div>
-        <form className="notify-form" action="#" method="post">
-          <input type="email" placeholder="E-posta" required />
-          <button type="submit">Bildirim Al</button>
-        </form>
+        <div className="cta-row">
+          <Link className="cta primary" href="/companies">
+            Şirketleri incele
+          </Link>
+          <Link className="cta ghost" href="/contact">
+            Haber ver
+          </Link>
+        </div>
       </section>
     </main>
   );
