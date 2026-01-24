@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { supabaseBrowser } from "@/lib/supabase";
+import { supabaseBrowser } from "@/lib/supabase/client";
 import { useAuth } from "@/components/auth/AuthProvider";
 
 export default function AuthPage() {
